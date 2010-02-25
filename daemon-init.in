@@ -57,12 +57,14 @@ status_nagios ()
 
 printstatus_nagios()
 {
-
-	if status_nagios $1 $2; then
+	status_nagios $1 $2
+	RETVAL=$?
+	if [ $RETVAL = 0 ]; then
 		echo "nagios (pid $NagiosPID) is running..."
 	else
 		echo "nagios is not running"
 	fi
+	return $RETVAL
 }
 
 
@@ -178,6 +180,7 @@ case "$1" in
 	status)
 		pid_nagios
 		printstatus_nagios nagios
+		exit $?
 		;;
 
 	checkconfig)
