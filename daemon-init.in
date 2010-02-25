@@ -134,6 +134,7 @@ case "$1" in
 			rm -f $NagiosCommandFile
 			touch $NagiosRunFile
 			chown $NagiosUser:$NagiosGroup $NagiosRunFile
+			[ -x /sbin/restorecon ] && /sbin/restorecon $NagiosRunFile
 			$NagiosBin -d $NagiosCfgFile
 			if [ -d $NagiosLockDir ]; then touch $NagiosLockDir/$NagiosLockFile; fi
 			echo " done."
