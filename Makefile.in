@@ -329,7 +329,7 @@ install-commandmode:
 	@echo ""
 
 
-fullinstall: install install-init install-commandmode install-webconf
+fullinstall: install install-init install-commandmode install-webconf install-config
 
 # Uninstall is too destructive if base install directory is /usr, etc.
 #uninstall:
