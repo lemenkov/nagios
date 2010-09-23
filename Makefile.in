@@ -264,6 +264,7 @@ install-config:
 	@echo ""
 
 install-webconf:
+	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTTPD_CONF)
 	$(INSTALL) -m 644 sample-config/httpd.conf $(DESTDIR)$(HTTPD_CONF)/nagios.conf
 
 	@echo ""
