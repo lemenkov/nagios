@@ -229,7 +229,7 @@ case "$1" in
 
 	*)
 		echo "Usage: nagios {start|stop|restart|reload|force-reload|status|checkconfig}"
-		exit 1
+		exit 2
 		;;
 
 esac
