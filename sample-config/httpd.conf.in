@@ -6,9 +6,9 @@
 # configuration file.  Customize the paths, etc. as
 # needed to fit your system.
 
-ScriptAlias @cgiurl@ "@sbindir@"
+ScriptAlias @cgiurl@ "@cgidir@"
 
-<Directory "@sbindir@">
+<Directory "@cgidir@">
 #  SSLRequireSSL
    Options ExecCGI
    AllowOverride None
