@@ -19,7 +19,7 @@ ScriptAlias @cgiurl@ "@cgidir@"
 #  Allow from 127.0.0.1
    AuthName "Nagios Access"
    AuthType Basic
-   AuthUserFile @sysconfdir@/htpasswd.users
+   AuthUserFile @sysconfdir@/passwd
    Require valid-user
 </Directory>
 
@@ -36,7 +36,7 @@ Alias @htmurl@ "@datadir@"
 #  Allow from 127.0.0.1
    AuthName "Nagios Access"
    AuthType Basic
-   AuthUserFile @sysconfdir@/htpasswd.users
+   AuthUserFile @sysconfdir@/passwd
    Require valid-user
 </Directory>
 
