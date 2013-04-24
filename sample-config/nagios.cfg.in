@@ -54,6 +54,8 @@ cfg_file=@sysconfdir@/objects/localhost.cfg
 #cfg_dir=@sysconfdir@/switches
 #cfg_dir=@sysconfdir@/routers
 
+cfg_dir=@sysconfdir@/conf.d
+
 
 
 
